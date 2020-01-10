@@ -1,0 +1,42 @@
+<div class="form" id="login">  
+
+  <form action="" method="POST" class="loginClass">
+  <div class="message">
+    <div class="alert-{{self.status}}" ng-hide="self.status">
+      <i class="fas fa-exclamation-triangle"></i> {{self.reason}} 
+    </div>
+  </div>
+
+  <div class="form-title">
+    {{self.title}}
+  </div>
+
+  <div class="input-form">
+    <div class="icon">
+      <i class="fas fa-user" aria-hidden="true"></i>
+    </div>
+    <input type="text" placeholder="Username" required="" ng-model="self.username">
+  </div>
+
+  <div class="input-form">
+    <div class="icon">
+      <i class="fa fa-lock" aria-hidden="true"></i>
+    </div>
+    <input type="password" placeholder="Password" required="" ng-model="self.password">
+  </div>
+  <button id="submit" type="submit" ng-click="self.login()">Login</button>
+</form>
+
+<div class="forgot-password">
+  <span class="text1">Forgot</span>
+  <span>
+    <a href="#!/api/v1/accounts/forgot-password" class="text2">Password?</a>
+  </span>
+</div>
+
+<div id="create">
+  <span>
+    <a class="text2" href="#!/api/v1/accounts/register">Create your account <i class="fas fa-arrow-right"></i></a>
+  </span>
+</div>
+</div>

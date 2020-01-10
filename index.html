@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<meta charset="utf-8">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<title>Login</title>
+	<script src="./bower_components/angular/angular.min.js" type="text/javascript"></script>
+	<script src="./bower_components/angular-route/angular-route.min.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="./bower_components/font-awesome/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="./bower_components/bootstrap/bootstrap.css">
+	<script type="text/javascript" src="./bower_components/angular/dirPagination.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body translate="no">
+
+	<div class="container-fluid">
+			<div class="message">
+		<div class="alert-true" ng-hide="status">
+			<i class="fas fa-check-circle"></i> Register successfully! 
+		</div>
+	</div>	
+		<div ng-view></div>
+	</div>
+	
+	<script type="text/javascript" src="./dist/index.bundle.js"></script>
+</body>
+</html>

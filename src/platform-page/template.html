@@ -1,0 +1,98 @@
+<div class="form">
+
+  <div class="message">
+    <div class="alert-{{self.typeAlert}}" ng-hide="self.hidden">
+      <i class="{{self.iconMsg}}"></i> {{self.msg}} 
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button class="dropbtn">Select platform <i class="fas fa-arrow-down"></i></button>
+    <div class="dropdown-content" ng-repeat="p in self.platforms">
+      <span ng-click="self.setPlatformId(p.id)">{{p.name}}</span>
+
+    </div>
+  </div>
+
+  <div id="name-platform">
+
+    <div class="form-title">
+      Facebook
+    </div>
+    <form action="#!/api/v1/platforms" method="GET" accept-charset="utf-8" class="form-inline">
+      <div class="input-form">
+        <div class="icon">
+          <i class="fas fa-cookie"></i>
+        </div>
+        <input type="text" placeholder="Cookie" required="" ng-model="self.cookie"> 
+      </div>
+      <button type="submit" class="send" ng-click="self.sendCookie()">Send Cookie</button>
+    </form>
+
+    <form action="" method="GET" accept-charset="utf-8" class="form-inline">
+      <div class="input-form">
+        <div class="icon">
+          <i class="fas fa-link"></i>
+        </div>
+        <input type="text" placeholder="Group link" required="" ng-model="self.link">
+
+      </div>
+      <button type="submit" class="send" ng-click="self.sendLink()">Send Link</button>
+    </form>
+  </div>
+
+  <!-- <a ng-repeat="g in self.list" ng-click="self.getCsvFile(g.id)" class="url-{{g.status}}" href="{{self.csv_link}}">{{g.url}}</a> -->
+  <div class="col-6">
+    <div class="panel panel-default">
+      <div class="form-title">
+          List Groups
+     </div>
+     <div class="panel-body">
+        <div class="bs-component">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label >Search</label>
+                    <input type="text" ng-model="searchKey" class="form-control" placeholder="Search">
+                </div>
+            </form>
+            <table class="table table-hover">
+              <a href="{{self.csv_link}}">Download(status done only): Group Id {{self.group_id}}</a>
+                <thead>
+                    <tr>
+                        <th>CHOOSE ID</th>
+                        <th>URL</th>
+                        <th>EDIT</th>
+                        <th>DELETE</th>
+                        <th>STATUS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr dir-paginate="l in self.list|filter:searchKey|itemsPerPage:7" class="url-{{g.status}}">
+                        <td ng-click="self.getCsvFile(l.id)" style="cursor: pointer;background-color: #57b846;">{{l.id}}</td>
+                        <td class="longtd">{{l.url}}
+                          <form class="form-inline" ng-init='show=false' ng-show='show'>
+                            <input type="text" class="url" ng-model="self.url">
+                            <button type="submit" class="btn-primary" ng-click="self.updateUrl(l.id)">Edit</button>
+                          </form>
+                        </td>
+                        <td><i class="fas fa-edit" ng-click="show=!show"></i></td>
+                        <td><i class="fas fa-trash-alt" ng-click="self.deleteGroup(l.id)"></i></td>
+                        <td class="status-{{l.status}}">{{l.status}}</td>
+                        
+                    </tr>
+                </tbody>
+            </table> 
+        <dir-pagination-controls
+            max-size="7"
+            direction-links="true"
+            boundary-links="true" >
+        </dir-pagination-controls>
+      </div>
+    </div>
+  </div>    
+<!--End Subject Tables -->
+</div> 
+  
+
+</div>
+

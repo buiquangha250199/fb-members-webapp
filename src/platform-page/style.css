@@ -1,0 +1,190 @@
+platform-page .dropbtn {
+  background-color: #57b846;
+  color: #fff;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+platform-page .dropdown {
+  position: relative;
+  display: inline-block;
+  margin-top: 65px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+platform-page .dropdown-content {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: 45px;
+  transform: translate(-50%, -50%);
+  background-color: #f9f9f9;
+  text-transform: capitalize;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+platform-page .dropdown-content span {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+platform-page .dropdown-content span:hover {background-color: #f2f2f2}
+
+platform-page .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+platform-page .dropdown:hover .dropbtn {
+  background-color: #333333;
+}
+
+platform-page input {
+  border-radius: 0;
+}
+
+platform-page form.form-inline{
+  display: flex;
+  justify-content: center;
+} 
+
+platform-page div#name-platform {
+  text-align: center;
+  margin-top: 20px;
+}
+
+platform-page button.send {
+  height: 50px;
+  width: 100px;
+  color: #fff;
+  background-color: #57b846;
+
+}
+
+platform-page div.form {
+  height: auto;
+  position: relative;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  display: block;
+  box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+platform-page div.form-title {
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 30px;
+  font-family: Poppins-Bold;
+  font-size: 24px;
+  color: #333333;
+  font-weight: bold;
+}
+
+platform-page .alert-false {
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  width: 100%;
+}
+
+platform-page .alert-true {
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+  color: #155724;
+  background-color: #57b846cc;
+  border-color: #c3e6cb;
+  width: 100%;
+}
+
+platform-page div#list-groups {
+    text-align: center;
+    margin-top: 15px;
+}
+
+platform-page a.url-fail {
+    display: block;
+    background-color: antiquewhite;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+platform-page a.url-done {
+    display: block;
+    background-color: #d4edda;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+platform-page .panel-heading {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+platform-page .col-6 {
+  margin-top: 25px;
+}
+
+@media only screen and (max-width: 600px) {
+  platform-page div.form {
+    width: 400px;
+    margin: 0 0;
+  }
+
+  platform-page .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    padding: 1px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+  }
+
+  platform-page th {
+    font-size: 10px;
+  }
+  platform-page td {
+    font-size: 8px;
+  }
+
+}
+
+platform-page input.url {
+  width: 430px;
+  height: fit-content;
+  padding: 0;
+}
+
+platform-page td {
+  text-align: center;
+}
+
+platform-page .status-crawling {
+  background-color: yellow;
+}
+
+platform-page .status-done {
+  background-color: #57b846cc;
+  
+}
+
+platform-page .status-fail {
+  background-color: red;
+}

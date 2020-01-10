@@ -1,0 +1,39 @@
+<div class="form" id="registerForm">
+
+  <form action="#!/api/v1/accounts/login" id="register" method="POST">
+  <div class="message">
+    <div class="alert-{{self.status}}" ng-hide="self.status">
+      <i class="fas fa-exclamation-triangle"></i> {{self.reason}} 
+    </div>
+  </div>
+
+  <div class="form-title">
+    {{self.title}}
+  </div>
+
+  <div class="input-form">
+    <div class="icon">
+      <i class="fas fa-user" aria-hidden="true"></i>
+    </div>
+    <input type="text" placeholder="Username" required="" ng-model="self.username">
+  </div>
+
+  <div class="input-form">
+    <div class="icon">
+      <i class="fa fa-lock" aria-hidden="true"></i>
+    </div>
+    <input type="password" placeholder="Password" required="" ng-model="self.password">
+  </div>
+
+  <div class="input-form">
+    <div class="icon">
+      <i class="fas fa-envelope" aria-hidden="true"></i>
+    </div>
+    <input type="email" placeholder="Email" required="" ng-model="self.email">
+  </div>
+  
+  <button type="submit" id="submit" ng-click="self.register()">Sign up now</button>
+</form> 
+
+  
+</div>
