@@ -2,4 +2,4 @@
 
 # Install
 1. Npm install
-2. cd 
+2. http-server
