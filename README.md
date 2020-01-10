@@ -1,3 +1,5 @@
 # fb-members-webapp
 
-#Install
+# Install
+1. Npm install
+2. cd 
